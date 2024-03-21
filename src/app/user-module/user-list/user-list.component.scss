@@ -1,0 +1,207 @@
+.table-container {
+    box-shadow: 0 4px 16px #ccd5d8;
+    background: linear-gradient(180deg, #fff, 20%, #ecfbff);
+    margin: auto auto 1rem;
+    border: 1px solid #c4c4c47a;
+    font-size: 14PX;
+    font-family: Nunito Sans, sans-serif;
+    font-style: normal;
+    border-radius: 8px;
+
+    .image_column {
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+
+    .image_column_width {
+        width: 6% !important;
+
+    }
+
+    .cursor {
+        cursor: pointer !important;
+    }
+
+
+    .custom-padding {
+        padding: 0px;
+    }
+
+    .default-padding {
+        padding: 0 16px 0 16px;
+    }
+
+    .table-header {
+        height: 38px;
+        position: sticky;
+        top: 100px;
+        z-index: 2;
+        background: white;
+
+        th {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #97257f;
+        }
+    }
+
+    .table-row {
+        height: 48px;
+    }
+
+    .table-body {
+        background: none;
+    }
+
+    .mat-mdc-row:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 130, 181, 0.16) 100%);
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+
+    .amt {
+        position: relative;
+        right: 9%;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .arrow_icon {
+        color: #1b82b5;
+    }
+
+    .lock {
+        color: #C4C4C4;
+    }
+
+    .unlock {
+        color: #F2B81B;
+    }
+
+    .d-flex {
+        display: flex;
+        background: white;
+    }
+
+    mat-grid-list {
+        background: white;
+    }
+
+    .go-to-container {
+        display: flex;
+        align-items: baseline;
+        margin-top: 15px;
+
+        mat-form-field {
+            width: 56px;
+        }
+
+        .go-to-label {
+            margin: 0 4px;
+            font-size: 12px;
+        }
+    }
+
+    .data__staus {
+        border: 1px solid;
+        padding: 5px 12px;
+        border-radius: 8px;
+        font-family: Nunito Sans, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #2d3748;
+    }
+
+    .tgl {
+        display: none;
+
+        // add default box-sizing for this scope
+        &,
+        &:after,
+        &:before,
+        & *,
+        & *:after,
+        & *:before,
+        &+.tgl-btn {
+            box-sizing: border-box;
+
+            &::selection {
+                background: none;
+            }
+        }
+
+        +.tgl-btn {
+            outline: 0;
+            display: block;
+            width: 40px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+
+            &:after,
+            &:before {
+                position: relative;
+                display: block;
+                content: "";
+                width: 50%;
+                height: 100%;
+            }
+
+            &:after {
+                left: 0;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &:checked+.tgl-btn:after {
+            left: 50%;
+        }
+    }
+
+    .tgl-flat {
+        +.tgl-btn {
+            padding: 2px;
+            transition: all .2s ease;
+            background: #fff;
+            border: 2px solid #ccc;
+            border-radius: 2em;
+
+            &:after {
+                transition: all .2s ease;
+                background: #ccc;
+                content: "";
+                border-radius: 1em;
+            }
+        }
+
+        &:checked+.tgl-btn {
+            border: 2px solid #1b82b5;
+
+            &:after {
+                left: 50%;
+                background: #1b82b5;
+            }
+        }
+    }
+
+    .toggle-btn {
+        background: none !important;
+        border: none !important;
+    }
+}

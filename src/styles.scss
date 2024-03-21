@@ -1,0 +1,32 @@
+/* styles.css */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+header {
+  background-color: #343a40;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #17a2b8 !important;
+}
+
+.container {
+  padding: 0 15px;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text_c {
+  text-align: center !important;
+}

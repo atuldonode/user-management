@@ -1,0 +1,54 @@
+<div class="details">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="row d_flex">
+            <div class="col-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>ID</mat-label>
+                    <input matInput formControlName="id" readonly>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-error *ngIf="userForm.get('name').invalid && userForm.get('name').touched">Name is
+                        required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-error *ngIf="userForm.get('email').invalid && userForm.get('email').touched">Email is required
+                        and must
+                        be valid</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <!-- <mat-form-field appearance="outline">
+                <mat-label>Role</mat-label>
+                <input matInput formControlName="role">
+                <mat-error *ngIf="userForm.get('role').invalid && userForm.get('role').touched">Role is required</mat-error>
+            </mat-form-field> -->
+
+                <mat-form-field appearance="outline" class="custom-field">
+                    <mat-label>Role</mat-label>
+                    <mat-select class="myFilter" [(value)]="selected">
+                        <mat-option [value]="item.userType" *ngFor="let item of userType"
+                            [disabled]="item.isNotSelect === false"
+                            (click)="selectUserType(item.userType)">{{item.userType}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div class="row" style="float: right;">
+            <div>
+                <button [disabled]="userForm.invalid" mat-raised-button color="primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
