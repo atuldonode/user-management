@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { counterReducer } from './counter.reducer';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    StoreModule.forRoot({ count: counterReducer })
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

@@ -1,0 +1,6 @@
+<div style="display: flex; justify-content: space-around;">
+    <button mat-raised-button color="primary" (click)="increment()" type="submit">Increment</button>
+    <div>Current Count: {{ count$ | async }}</div>
+    <button mat-raised-button color="warn" (click)="decrement()" type="submit">Decrement</button>
+    <button mat-raised-button color="primary"(click)="reset()" type="submit">Reset Counter</button>
+</div>
